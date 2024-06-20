@@ -8,6 +8,8 @@ import localforage from "localforage";
 import useSWR from "swr";
 import { motion } from "framer-motion";
 
+const fetcher = (url) => fetch(url).then((res) => res.json());
+
 const useStore = create(
   persist(
     (set) => ({
